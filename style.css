@@ -1,0 +1,54 @@
+.container{
+    position: relative;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    display: inline-block;
+    color: #fff;
+    padding: 15px;
+    background: red;
+    margin: 10px;
+    width: 100px;
+}
+
+.item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    background: yellow;
+    width: 0px;
+    height: 1px;
+    margin-top:40px;
+    margin-left:-45px;
+    transition: 0.3s;
+}
+.item:hover::after{
+    width: 50px;
+}
+@keyframes fly{
+    form{width: 0px;}
+    to{width: 50px;}
+}
+
+/*
+.item:hover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    background: yellow;
+    width: 0px;
+    height: 3px;
+    margin-top:40px;
+    margin-left:-50px;
+    animation: 0.3s fly forwards;
+    transition: 0.3s;
+}
+@keyframes fly{
+    form{width: 0px;}
+    to{width: 50px;}
+}*/
